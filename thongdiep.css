@@ -10,7 +10,6 @@
   min-height: 100vh;
   padding: 20px;
 } */
- 
 body {
   font-family: 'JetBrains Mono', Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -18,13 +17,12 @@ body {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  
+
   /* Màu nền gốc: Xanh lam cực nhạt */
   background-color: #aad4f8; 
   position: relative;
   z-index: 0;
 }
-
 /* Tạo 2 khối ánh sáng khổng lồ nằm chìm dưới nền */
 body::before,
 body::after {
@@ -179,7 +177,7 @@ body::after {
 ========================= */
 .message-card {
   position: absolute;
-  top: 0;
+  top:0 ;
   left: 0;
   width: 1600px;
   height: 900px;
@@ -227,57 +225,72 @@ body::after {
   top: 70%;
   left: 5.5%;
   width: 29%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-family: "Kanit", sans-serif;
-  font-size: 40px; /* Dùng kích thước tĩnh vì toàn bộ card sẽ được scale tỷ lệ */
+  font-size: 50px;
   font-weight: 800;
   color: #ff0000;
+  white-space: nowrap;
+  overflow: hidden;
   -webkit-text-stroke: 1px #ffffff;
-  text-shadow: 
-        3px 3px 3px rgba(255, 255, 255, 0.5);
+  text-shadow:
+      3px 3px 3px rgba(255,255,255,0.5);
 }
-
 .unit-preview {
   position: absolute;
   top: 76%;
   left: 5.5%;
   width: 29%;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   font-family: "Kanit", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
   color: #0077ff;
+  line-height: 1.35;
+  padding: 0 12px;
+  overflow: hidden;
   -webkit-text-stroke: 0.5px #ffffff;
-  text-shadow: 
-        2px 2px 2px rgba(255, 255, 255, 0.5);
-  line-height: 1.4;
+  text-shadow:
+      2px 2px 2px rgba(255,255,255,0.5);
 }
 .message-box {
   position: absolute;
-  top: 28%;
-  left: 38.6%;
+  top: 25%;
+  left: 38.5%;
   width: 57%;
   height: 65.5%;
   border-radius: 25px;
-  padding: 2px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
 }
+
 
 .message-preview {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  text-align: center;
   font-family: 'Montserrat', sans-serif;
   color: #0073ff;
-  border-radius: 23px;
-  white-space: pre-wrap;
-  word-break: break-word;
-  overflow: hidden;
-  line-height: 1.45;
   font-weight: bold;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.7;
   padding: 20px;
+  overflow: hidden;
 }
 /* THUỘC TÍNH CHO ẢNH NỀN MỚI */
 .bg-template {
