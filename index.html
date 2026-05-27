@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đại Hội Hội LHTN Thành Phố Đà Nẵng</title>
+    <link rel="icon" href="111.png" type="image/png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <div id="intro-screen"></div>
+    <div id="permanent-bg"></div>
+    <div id="main-ui">
+        <img src="111.png" alt="Logo" class="main-logo">
+        <div id="bg-slideshow">
+            <div class="slide-track" id="slideTrack"></div>
+        </div>
+        <nav class="button-group" id="main-buttons">
+            <button onclick="showContent('doc1')">TÀI LIỆU ĐẠI HỘI</button>
+            <button onclick="showContent('doc2')">BIỂU TRƯNG ĐẠI HỘI</button>
+            <button onclick="showContent('doc3')">BÀI VIẾT GIỚI THIỆU CÁN BỘ HỘI</button>
+            <button onclick="showContent('doc4')">CLB ĐỘI NHÓM</button>
+            <button onclick="showContent('doc5')">CA KHÚC ĐẠI HỘI</button>
+            <button onclick="showSubMenu('clb-menu')">TUYÊN TRUYỀN ĐẠI HỘI</button>
+        </nav>
+        
+        <nav class="button-group hidden" id="clb-menu">
+            <button onclick="window.location.href='thongdiep.html'">THÔNG ĐIỆP GỬI GẮM ĐẠI HỘI</button>
+            <button onclick="window.open('https://khunghinh.net/p/9335011e9476670c', '_blank')">KHUNG AVATAR ĐẠI HỘI</button>
+            <button onclick="showContent('doc7')">CA KHÚC ĐẠI HỘI</button>
+            <button onclick="showContent('doc8')">HÌNH NỀN ĐIỆN THOẠI</button>
+            <button onclick="showContent('doc9')">HÌNH NỀN MÁY TÍNH</button>
+            <button class="back-btn" onclick="showMainMenu()">⬅ QUAY LẠI</button>
+        </nav>
+    </div>
+    
+    <div id="content-display" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="content-title">Tiêu đề</h2>
+                <button class="close-btn" onclick="closeContent()">✖</button>
+            </div>
+            <div id="document-content" class="custom-scroll" style="display: none;"></div>
+            <iframe id="document-frame" src="" style="display: none;"></iframe>
+            <div id="video-container" style="display: none; flex-grow: 1; background: #000;">
+                <video controls id="video-player" width="100%" height="100%" src="" frameborder="0" allowfullscreen></video>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
